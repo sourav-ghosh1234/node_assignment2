@@ -3,7 +3,7 @@ const app=express();
 
 const fs=require('fs')
 
-app.use('/vagetables',(req,res)=>{
+app.get('/vagetables',(req,res)=>{
     let rawdata=fs.readFileSync('example.json')
 let student=JSON.parse(rawdata);
 res.send(student)
